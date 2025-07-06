@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+<!--About section-->
+    <div class="container page-top">
+        {% if about_data %}
+
+            <div class="row">
+                {% for about in about_data %}
+                    <div class="col-12 col-md-12">
+                        <h1 class="fs-3 about-title">{{ about.title }}</h1>
+                    </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-12">
+                            <p class="about-content fs-5">{{ about.description|safe }}</p>
+                        </div>
+                    </div>
+
+                    <div class="container mt-3 pt-3">
+                        <div class="row">
+                            <div class="card about-card mb-3">
+                                <div class="card-body">
+                                    <h4 class="card-title">Skills</h4>
+                                    <p class="card-text fs-5">{{ about.skills }}</p>
+                                    {% for skill in about.skills_tags.all %}
+
+                                        <button class="btn btn-tag btn-sm" disabled>{{ skill.name }}</button>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container mt-3 pt-3">
+                            <div class="card about-card mb-3">
+                                <div class="card-body">
+                                    <h4 class="card-title">Experience</h4>
+                                    <p class="card-text experience fs-6">{{ about.experience|safe }} </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container mt-3 pt-3">
+                            <div class="card about-card mb-3">
+                                <div class="card-body">
+                                    <h4 class="card-title">Certifications</h4>
+                                    <p class="card-text fs-5">{{ about.certifications }} </p>
+                                    <p class="cert fs-5"> Code Institute: August 2023</p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="container mt-3 pt-3">
+                            <div class="card about-card mb-3">
+                                <div class="card-body">
+                                    <h4 class="card-title">Hobbies & Interests</h4>
+                                    <p class="card-text fs-5">{{about.hobbies}} </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        {% else %}
+            <p class="text-center">No about data available at the moment.</p>
+        {% endif %}
+    </div>
+
+{% endblock %}

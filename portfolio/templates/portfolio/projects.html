@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Projects {% endblock %}
+{% block content %}
+
+    <div class="container page-top">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h2 class="mt-4">Featured Projects </h2> 
+                <p class="lead mt-3">Explore some of the projects showcasing my work in Web Development and Data Analysis.                   
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="container">     
+    {% if projects_data %}
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for project in projects_data %}
+            <div class="col">
+                <div class="card h-100">
+                    {% if project.Project_image %}
+                        <img src="{{ project.Project_image.url }}" alt="{{ project.name }} Image" class="img-fluid project-img" style="width: auto; height: auto;">
+                    {% else %}
+                        <img src="{% static 'images/default-project.png' %}" alt="Default Project Image" class="img-fluid" style="width: auto; height: auto;">
+                    {% endif %}
+                    <div class="card-body">
+                        <h3 class="project-title mb-2">{{ project.name }}</h3>
+                        <p class="card-text text-secondary">{{ project.description }}</p>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-2 ms-3">
+                        {% for tag in project.tags.all %}
+                        <button class="btn btn-tag btn-sm" disabled>{{ tag.name }}</button>
+                        {% endfor %}
+                    </div>
+                        
+                    <div class="d-flex justify-content-center mt-3 mb-3">
+                        <a href="{{ project.link }}" class="btn btn-sm btn-github rounded-2" aria-label="Go To Project link | Source Code">View on GitHub </a>
+                    </div>                           
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+            {% else %}
+            <p class="text-center">No projects available at the moment.</p>
+    {% endif %}
+    </section>
+
+{% endblock %}
+    

@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    {% load crispy_forms_tags %}
+
+<!--Home Page -->
+    <div class="hero-container">
+        {% if home_data %}
+            <div class="hero-image-bg">
+                <div class="container-fluid">
+                    {% for data in home_data %}
+                        <div class="row align-items-center justify-content-center mb-5">
+
+                            <div class="col-12 col-lg-3 col-md-6 text-center mb-3 mb-lg-0">
+                                <div class="hero-image-wrapper">
+                                    <img src="{{ data.picture.url }}" alt="{{ data.name }} Image" class="img-fluid project-img rounded-circle">
+                                </div>
+                            </div>
+                            <!-- Hero Text Content -->
+                            <div class="col-12 col-lg-6 col-md-6 justify-content-center">
+                                <div class="hero-text-content">
+                                    <h2 class="hero-greeting typewriter mb-2">{{ data.greeting }}</h2>
+                                    <p class="hero-text mb-2">{{ data.title }}</p>
+                                    <div class="hero-btn d-flex flex-column flex-sm-row gap-3 justify-content-center mt-4">
+                                        <a href="{% url 'contact' %}" class="btn btn-light btn-lg btn-contact-me rounded-3" aria-label="Go To Contact Page">Get in Touch</a>
+                                        <a href="{% url 'projects' %}" class="btn btn-lg btn-view-projects px-4 py-2 me-sm-3 fw-bold" aria-label="Go To Projects Page">View Projects</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row mb-4 mt-5">
+                        <div class="col-12 text-center">
+                            <h5 class="card-title index-subtitle">About Me</h5>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-12 mb-2 mb-sm-0 col-md-6 d-flex">
+                            <div class="card about-card mt-5">
+                                <div class="card-body">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <small>
+                                            <span class="btn btn-about-me"><i class="fas fa-code"></i>
+                                            </span>
+                                        </small>
+                                        <h5 class="card-title">Web Development</h5>
+                                    </div>
+                                    <p class="intro-text mt-3">{{ data.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 mb-2 mb-sm-0 d-flex">
+                            <div class="card about-card mt-5">
+                                <div class="card-body">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <small>
+                                            <span class="btn btn-about-me"><i class="fa-solid fa-magnifying-glass-chart"></i>
+                                            </span>
+                                        </small>
+                                        <h5 class="card-title">Predictive Analytics</h5>
+                                    </div>
+                                    <p class="intro-text mt-3">{{ data.description_intro2 }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="text-center">
+                        <a href="{% url 'about' %}" class="btn btn-light btn-lg btn-about-me px-2 py-2 me-sm-2" aria-label="Go To About Page">Learn More About Me</a>
+                    </div>
+                </div
+        {% endfor %}
+        </div>
+    </div>
+            </div>
+        {% else %}
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-center">No data available at the moment.</p>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

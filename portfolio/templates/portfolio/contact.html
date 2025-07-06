@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+    {% load crispy_forms_tags %}
+
+    <!-- Contact Form -->
+    <div class="contact-image-bg">
+
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-12">
+                    <h3 class="text-center contact-title"><strong>Contact Me</strong></h3>
+                    <P class="container-fluid col-lg-8 mt-4 mt-lg-0 text-center contact-text">Have a question or want to get in touch?
+                        Fill out the form below and I'll get back to you as soon as possible.
+                    </P>
+                    <div class="col-12 col-md-8 order-md-2 order-sm-1 order-1 mt-5 mt-lg-0 justify-content-center mx-auto">
+
+                        <form method="POST" action="{% url 'contact' %}" class="contact-form align-items-center">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-12 col-md-6">{{ form.name | as_crispy_field }}</div>
+                                <div class="col-12 col-md-6">{{ form.email | as_crispy_field }}</div>
+                                <div class="col-12">{{ form.subject | as_crispy_field }}</div>
+                                <div class="col-12">{{ form.message | as_crispy_field }}</div>
+                            </div>
+                            <div class="justify-content-sm-center justify-content-center d-flex mb-3">
+                                <button type="submit" class="btn btn-lg btn-enquiry px-3 py-2 me-sm-2" aria-label="Go To Contact Page">
+                                    Enquire Now
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Contact Form End -->
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AGOG DEV is a a Portfolio of Rashidat Adekoya.">
+    <meta name="author" content="Rashidat Adekoya">
+    <meta name="keywords" content="AGOG Developer, Software Engineer, Full-Stack Development, Software developer, Python, javaScript, Java, Django,
+    Predictive Analytics, Machine Learning, Artificial Intelligence, Web Development, Portfolio,">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    {% block extra_css %}{% endblock %}
+
+    <title>Agog Dev | Portfolio - {% block title %}{% endblock %}</title>
+</head>
+
+<body class="d-flex flex-column">
+
+    {% include 'includes/header.html' %}
+
+    <main class="page-top">
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock %}
+    </main>
+
+    {% include 'includes/footer.html' %}
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous">
+    </script>
+
+    <!-- FontAwesome Kit-->
+    <script src="https://kit.fontawesome.com/2d736759eb.js" crossorigin="anonymous"></script>
+
+    <!-- Main JS -->
+    <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
+
+    <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    {% block extra_js %}{% endblock %}
+
+</body>
+</html>

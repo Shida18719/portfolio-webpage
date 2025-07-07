@@ -7,7 +7,7 @@ cloudinary==1.44.1
 colorama==0.4.6
 crispy-bootstrap5==2025.6
 dj-database-url==3.0.0
-Django==5.2.4
+Django==4.2.16
 django-cloudinary-storage==0.3.0
 django-crispy-forms==2.4
 django-richtextfield==1.6.2

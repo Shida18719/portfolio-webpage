@@ -1,0 +1,7 @@
+services:
+  type: web
+  plan: starter
+  name: Rashidat-portfolio-webpage
+  runtime: python
+  buildCommands: './build.sh'
+  startCommand: 'python -m gunicorn agog_dev.asgi:application -k uvicorn.workers.UvicornWorker'

@@ -198,7 +198,7 @@ STORAGES = {
             "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
             },
         "staticfiles": {
-            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+            "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
         },
 }
 
@@ -211,9 +211,6 @@ CLOUDINARY_STORAGE = {
 
 WHITENOISE_MANIFEST_STRICT = False
 WHITENOISE_SKIP_MISSING_FILES = True
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

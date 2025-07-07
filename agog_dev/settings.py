@@ -189,6 +189,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
 if not DEBUG:
@@ -196,13 +198,13 @@ if not DEBUG:
 
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME' : os.getenv('CLOUDINARY_CLOUD_NAME'), 
     'API_KEY' : os.getenv('CLOUDINARY_API_KEY'),
     'API_SECRET' : os.getenv('CLOUDINARY_API_SECRET'),
 }
+
+WHITENOISE_SKIP_MISSING_FILES = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -45,7 +45,8 @@ EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'portfolio.backends.email_backend.EmailBackend'
 
 
-ALLOWED_HOSTS = ['https://portfolio-webpage-gf7s.onrender.com']
+ALLOWED_HOSTS = ['portfolio-webpage-gf7s.onrender.com']
+
 
 # CSRF_TRUSTED_ORIGINS = ['']
 

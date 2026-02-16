@@ -17,6 +17,11 @@ A Software Developer passionate about Full-Stack Development, Python | Django, J
 
 ![Rashidat Adedekoya | Portfolio](./READMEimages/)
 
+![GitHub last commit](https://img.shields.io/github/last-commit/Shida18719/portfolio-webpage?style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/Shida18719/portfolio-webpage?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/Shida18719/portfolio-webpage?style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/Shida18719/portfolio-webpage?style=for-the-badge)
+
 
 ## CONTENTS
 * [Overview](#overview)
@@ -38,6 +43,8 @@ A Software Developer passionate about Full-Stack Development, Python | Django, J
 ## Overview
 
 This project is a personal portfolio website built with Django. It is designed to showcase my skills, projects, and provide an easy way for visitors or potential employers to contact me. The site features a modern, responsive design using JavaScript, Vanilla CSS, Bootstrap 5, a theme switcher (light/dark mode), and dynamic project and contact sections. The codebase is structured for easy maintenance and future enhancements, making it both a professional presence and a playground for learning and experimenting with new technologies.
+
+Link to deployed site: [Rashidat Adekoya's Personal Portfolio Website](https://portfolio-webpage-gf7s.onrender.com/)
 
 
 ### Project Goals

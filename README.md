@@ -15,8 +15,6 @@ A Software Developer passionate about Full-Stack Development, Python | Django, J
 ---
 
 
-![Rashidat Adedekoya | Portfolio](./READMEimages/)
-
 ![GitHub last commit](https://img.shields.io/github/last-commit/Shida18719/portfolio-webpage?style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/Shida18719/portfolio-webpage?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/Shida18719/portfolio-webpage?style=for-the-badge)

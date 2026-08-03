@@ -47,6 +47,11 @@ EMAIL_BACKEND = 'portfolio.backends.email_backend.EmailBackend'
 
 ALLOWED_HOSTS = ['portfolio-webpage-gf7s.onrender.com']
 
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
+
+# X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 
 # CSRF_TRUSTED_ORIGINS = ['']
 

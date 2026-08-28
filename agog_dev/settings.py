@@ -45,7 +45,7 @@ EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'portfolio.backends.email_backend.EmailBackend'
 
 
-ALLOWED_HOSTS = ['portfolio-webpage-gf7s.onrender.com', 'agog-dev-portfolio-fe63d674a930.herokuapp.com']
+ALLOWED_HOSTS = ['agog-dev-portfolio-fe63d674a930.herokuapp.com']
 
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 

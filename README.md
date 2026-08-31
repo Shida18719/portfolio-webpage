@@ -42,7 +42,7 @@ A Software Developer passionate about Full-Stack Development, Python | Django, J
 
 This project is a personal portfolio website built with Django. It is designed to showcase my skills, projects, and provide an easy way for visitors or potential employers to contact me. The site features a modern, responsive design using JavaScript, Vanilla CSS, Bootstrap 5, a theme switcher (light/dark mode), and dynamic project and contact sections. The codebase is structured for easy maintenance and future enhancements, making it both a professional presence and a playground for learning and experimenting with new technologies.
 
-Link to deployed site: [Rashidat Adekoya's Personal Portfolio Website](https://portfolio-webpage-gf7s.onrender.com/)
+Link to deployed site: [Rashidat Adekoya's Personal Portfolio Website](https://agog-dev-portfolio-fe63d674a930.herokuapp.com/)
 
 
 ### Project Goals

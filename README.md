@@ -1,5 +1,7 @@
 # portfolio-webpage
 
+![Am I responsive image](./docs/responsive-mockup.png)
+
 ## Personal Portfolio Website
 
 Welcome to the source code for **Rashidat Adekoya's Personal Portfolio Website** A Django-based site showcasing my work, skills, and contact information.
